@@ -12,7 +12,11 @@ const categoriesRoute = require('./routes/categories');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://easy-cart-shop.netlify.app'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Routes
