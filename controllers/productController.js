@@ -30,7 +30,7 @@ exports.createProduct = async (req, res) => {
     res.status(500).json({ msg: err.message || 'Server error' });
   }
 };
-
+//update of products
 exports.updateProduct = async (req, res) => {
   try {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
